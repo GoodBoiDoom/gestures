@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lo-Fi Chill Vibes</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=VT323&family=Orbitron:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="app-container">
+        <!-- Background scenes -->
+        <div class="background-container">
+            <div class="background-scene active" id="rainfall-scene">
+                <div class="rain-container"></div>
+                <div class="pixel-clouds"></div>
+            </div>
+            <div class="background-scene" id="space-scene">
+                <div class="stars-container"></div>
+                <div class="planet"></div>
+            </div>
+            <div class="background-scene" id="waterfall-scene">
+                <div class="waterfall-container"></div>
+                <div class="pixel-trees"></div>
+            </div>
+        </div>
+
+        <!-- Main content overlay -->
+        <div class="content-overlay">
+            <!-- Header -->
+            <header class="app-header">
+                <h1 class="app-title">Lo-Fi Sanctuary</h1>
+                <p class="app-subtitle">Relax • Focus • Vibe</p>
+            </header>
+
+            <!-- Scene selector -->
+            <div class="scene-selector">
+                <button class="scene-btn active" data-scene="rainfall-scene">
+                    <span class="scene-icon">🌧️</span>
+                    <span class="scene-name">Rainfall</span>
+                </button>
+                <button class="scene-btn" data-scene="space-scene">
+                    <span class="scene-icon">🌌</span>
+                    <span class="scene-name">Space</span>
+                </button>
+                <button class="scene-btn" data-scene="waterfall-scene">
+                    <span class="scene-icon">💧</span>
+                    <span class="scene-name">Waterfall</span>
+                </button>
+            </div>
+
+            <!-- Music player -->
+            <div class="music-player">
+                <div class="now-playing">
+                    <div class="album-art">
+                        <div class="pixel-art-cover"></div>
+                    </div>
+                    <div class="track-info">
+                        <h3 class="track-title">Midnight Coffee</h3>
+                        <p class="track-artist">Chill Beats Collective</p>
+                    </div>
+                </div>
+
+                <div class="player-controls">
+                    <button class="control-btn" id="prev-btn">⏮️</button>
+                    <button class="control-btn primary" id="play-pause-btn">▶️</button>
+                    <button class="control-btn" id="next-btn">⏭️</button>
+                </div>
+
+                <div class="progress-container">
+                    <span class="time current-time">0:00</span>
+                    <div class="progress-bar">
+                        <div class="progress-fill"></div>
+                    </div>
+                    <span class="time total-time">3:45</span>
+                </div>
+
+                <div class="volume-container">
+                    <span class="volume-icon">🔊</span>
+                    <input type="range" class="volume-slider" min="0" max="100" value="70">
+                </div>
+            </div>
+
+            <!-- Playlist -->
+            <div class="playlist">
+                <h3 class="playlist-title">Chill Playlist</h3>
+                <div class="track-list">
+                    <div class="track-item active">
+                        <span class="track-number">01</span>
+                        <div class="track-details">
+                            <span class="track-name">Midnight Coffee</span>
+                            <span class="track-duration">3:45</span>
+                        </div>
+                    </div>
+                    <div class="track-item">
+                        <span class="track-number">02</span>
+                        <div class="track-details">
+                            <span class="track-name">Rainy Window</span>
+                            <span class="track-duration">4:12</span>
+                        </div>
+                    </div>
+                    <div class="track-item">
+                        <span class="track-number">03</span>
+                        <div class="track-details">
+                            <span class="track-name">Cosmic Drift</span>
+                            <span class="track-duration">5:23</span>
+                        </div>
+                    </div>
+                    <div class="track-item">
+                        <span class="track-number">04</span>
+                        <div class="track-details">
+                            <span class="track-name">Forest Stream</span>
+                            <span class="track-duration">4:56</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Audio element -->
+        <audio id="audio-player">
+            <source src="assets/audio/midnight-coffee.mp3" type="audio/mpeg">
+            Your browser does not support the audio element.
+        </audio>
+
+        <!-- Particle overlay for ambient effects -->
+        <div class="particles-overlay"></div>
+    </div>
+
+    <script src="js/app.js"></script>
+</body>
+</html>
